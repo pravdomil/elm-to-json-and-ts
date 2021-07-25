@@ -161,10 +161,10 @@ errorToString : Error -> String
 errorToString v =
     case v of
         BadArguments ->
-            "Usage: elm-json-interop <File.elm>..."
+            "Usage: elm-json-interop <File.elm>...\n"
 
         CannotParse b c ->
-            "I can't parse \"" ++ b ++ "\", because: " ++ Parser.deadEndsToString c ++ "."
+            "I can't parse \"" ++ b ++ "\", because: " ++ Parser.deadEndsToString c ++ ".\n"
 
         JavaScriptError b ->
-            "elm-json-interop failed: " ++ JavaScript.errorToString b
+            "elm-json-interop failed: " ++ JavaScript.errorToString b ++ "\n"
